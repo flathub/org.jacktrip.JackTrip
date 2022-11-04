@@ -46,5 +46,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/jacktrip/jacktrip/
-        tag: "v1.6.4"
-        commit: adb2dd778f890d4908aa87d0b8ba73089527b431
+        tag: "v1.6.6"
+        commit: ffdef101da0341357a10d0113c1461e24377b927
