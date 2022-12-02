@@ -1,6 +1,6 @@
 app-id: org.jacktrip.JackTrip
 runtime: org.kde.Platform
-runtime-version: '5.15-21.08'
+runtime-version: '5.15-22.08'
 sdk: org.kde.Sdk
 command: jacktrip
 finish-args:
@@ -16,10 +16,9 @@ finish-args:
   # Pipewire/Jack
   - --filesystem=xdg-run/pipewire-0
 cleanup:
-  - /lib/python3.9
+  - /lib/python3.10
   - /share/man
 modules:
-  - shared-modules/linux-audio/jack2.json
   - name: python3-pyyaml
     buildsystem: simple
     cleanup: [ "*" ]
@@ -43,8 +42,11 @@ modules:
       sha256: 6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61
   - name: jacktrip
     buildsystem: meson
+    config-opts:
+      - -Dbuildtype=debugoptimized
     sources:
       - type: git
+        disable-submodules: true
         url: https://github.com/jacktrip/jacktrip/
-        tag: "v1.6.6"
-        commit: ffdef101da0341357a10d0113c1461e24377b927
+        tag: "v1.6.7"
+        commit: b97c6af137572834cbeb1e117d3ca15f53b80be3
