@@ -48,5 +48,5 @@ modules:
       - type: git
         disable-submodules: true
         url: https://github.com/jacktrip/jacktrip/
-        tag: "v1.6.7"
-        commit: b97c6af137572834cbeb1e117d3ca15f53b80be3
+        tag: "v1.6.8"
+        commit: a1f2749259e622aea702b3e24f8952fcbfdf779f
