@@ -29,8 +29,8 @@
                     "type": "git",
                     "disable-submodules": true,
                     "url": "https://github.com/jacktrip/jacktrip/",
-                    "tag": "v1.8.1",
-                    "commit": "7215dac63aaafb7b436c057b891a534be9ac68fd"
+                    "tag": "v1.9.0",
+                    "commit": "34c50c09f105be5cdfc6ad2d665ad528e7b823ce"
                 }
             ]
         }
