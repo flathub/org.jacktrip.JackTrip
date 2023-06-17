@@ -28,10 +28,9 @@
             "sources": [
                 {
                     "type": "git",
-                    "disable-submodules": true,
                     "url": "https://github.com/jacktrip/jacktrip/",
-                    "tag": "v1.9.0",
-                    "commit": "34c50c09f105be5cdfc6ad2d665ad528e7b823ce"
+                    "tag": "v1.10.0",
+                    "commit": "f9b34b1657bfe9a3e4cae0ab37803a7b0b596739"
                 }
             ]
         }
