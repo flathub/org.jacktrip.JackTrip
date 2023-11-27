@@ -7,46 +7,46 @@
     "base-version": "6.6",
     "command": "jacktrip",
     "finish-args": [
-        "--share=ipc",
-        "--socket=wayland",
-        "--socket=fallback-x11",
-        "--device=dri",
-        "--share=network",
-        "--filesystem=xdg-run/pipewire-0",
-        "--env=PIPEWIRE_LATENCY=128/48000",
-        "--env=QML_IMPORT_PATH=/app/qml",
-        "--env=QT_QUICK_CONTROLS_STYLE=universal"
+	"--share=ipc",
+	"--socket=wayland",
+	"--socket=fallback-x11",
+	"--device=dri",
+	"--share=network",
+	"--filesystem=xdg-run/pipewire-0",
+	"--env=PIPEWIRE_LATENCY=128/48000",
+	"--env=QML_IMPORT_PATH=/app/qml",
+	"--env=QT_QUICK_CONTROLS_STYLE=universal"
     ],
     "cleanup": [
-        "/lib/python3.10",
-        "/share/man"
+	"/lib/python3.10",
+	"/share/man"
     ],
     "modules": [
-        "pypi-dependencies.json",
-        {
-            "name": "jacktrip",
-            "buildsystem": "meson",
-            "config-opts": [
-                "-Dbuildtype=debugoptimized"
-            ],
-            "build-options": {
+	"pypi-dependencies.json",
+	{
+	    "name": "jacktrip",
+	    "buildsystem": "meson",
+	    "config-opts": [
+		"-Dbuildtype=debugoptimized"
+	    ],
+	    "build-options": {
 		    "arch": {
-		    	"aarch64": {
-		    		"prepend-pkg-config-path": "/app/lib/aarch64-linux-gnu/pkgconfig/"
-		    	},
-		    	"x86_64": {
-		    		"prepend-pkg-config-path": "/app/lib/x86_64-linux-gnu/pkgconfig/"
-		    	}
+			    "aarch64": {
+				    "prepend-pkg-config-path": "/app/lib/aarch64-linux-gnu/pkgconfig/"
+			    },
+			    "x86_64": {
+				    "prepend-pkg-config-path": "/app/lib/x86_64-linux-gnu/pkgconfig/"
+			    }
 		    }
 	    },
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/jacktrip/jacktrip/",
-                    "tag": "v2.1.0",
-                    "commit": "69ca05e63a9dd48d6e398bb9b1a3c2f574868253"
-                }
-            ]
-        }
+	    "sources": [
+		{
+		    "type": "git",
+		    "url": "https://github.com/jacktrip/jacktrip/",
+		    "tag": "v2.1.0",
+		    "commit": "69ca05e63a9dd48d6e398bb9b1a3c2f574868253"
+		}
+	    ]
+	}
     ]
 }
