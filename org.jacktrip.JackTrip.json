@@ -43,8 +43,8 @@
 		{
 		    "type": "git",
 		    "url": "https://github.com/jacktrip/jacktrip/",
-		    "tag": "v2.2.3",
-		    "commit": "0b2b27c10dc06ef61d094e8ed9992dc4dc4ccded"
+		    "tag": "v2.3.0",
+		    "commit": "8655af27e8b14a2912bca7b2a0ee6b85ef707597"
 		}
 	    ]
 	}
