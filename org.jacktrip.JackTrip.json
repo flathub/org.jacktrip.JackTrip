@@ -1,52 +1,52 @@
 {
-    "app-id": "org.jacktrip.JackTrip",
-    "runtime": "org.kde.Platform",
-    "runtime-version": "6.6",
-    "sdk": "org.kde.Sdk",
-    "base": "io.qt.qtwebengine.BaseApp",
-    "base-version": "6.6",
-    "command": "jacktrip",
-    "finish-args": [
-	"--share=ipc",
-	"--socket=wayland",
-	"--socket=fallback-x11",
-	"--device=dri",
-	"--share=network",
-	"--filesystem=xdg-run/pipewire-0",
-	"--env=PIPEWIRE_LATENCY=128/48000",
-	"--env=QML_IMPORT_PATH=/app/qml",
-	"--env=QT_QUICK_CONTROLS_STYLE=universal"
-    ],
-    "cleanup": [
-	"/lib/python3.10",
-	"/share/man"
-    ],
-    "modules": [
-	"pypi-dependencies.json",
-	{
-	    "name": "jacktrip",
-	    "buildsystem": "meson",
-	    "config-opts": [
-		"-Dbuildtype=debugoptimized"
-	    ],
-	    "build-options": {
-		    "arch": {
-			    "aarch64": {
-				    "prepend-pkg-config-path": "/app/lib/aarch64-linux-gnu/pkgconfig/"
-			    },
-			    "x86_64": {
-				    "prepend-pkg-config-path": "/app/lib/x86_64-linux-gnu/pkgconfig/"
-			    }
-		    }
-	    },
-	    "sources": [
+	"app-id": "org.jacktrip.JackTrip",
+	"runtime": "org.kde.Platform",
+	"runtime-version": "6.7",
+	"sdk": "org.kde.Sdk",
+	"base": "io.qt.qtwebengine.BaseApp",
+	"base-version": "6.7",
+	"command": "jacktrip",
+	"finish-args": [
+		"--share=ipc",
+		"--socket=wayland",
+		"--socket=fallback-x11",
+		"--device=dri",
+		"--share=network",
+		"--filesystem=xdg-run/pipewire-0",
+		"--env=PIPEWIRE_LATENCY=128/48000",
+		"--env=QML_IMPORT_PATH=/app/qml",
+		"--env=QT_QUICK_CONTROLS_STYLE=universal"
+	],
+	"cleanup": [
+		"/lib/python3.10",
+		"/share/man"
+	],
+	"modules": [
+		"pypi-dependencies.json",
 		{
-		    "type": "git",
-		    "url": "https://github.com/jacktrip/jacktrip/",
-		    "tag": "v2.3.0",
-		    "commit": "8655af27e8b14a2912bca7b2a0ee6b85ef707597"
+			"name": "jacktrip",
+			"buildsystem": "meson",
+			"config-opts": [
+				"-Dbuildtype=debugoptimized"
+			],
+			"build-options": {
+				"arch": {
+					"aarch64": {
+						"prepend-pkg-config-path": "/app/lib/aarch64-linux-gnu/pkgconfig/"
+					},
+					"x86_64": {
+						"prepend-pkg-config-path": "/app/lib/x86_64-linux-gnu/pkgconfig/"
+					}
+				}
+			},
+			"sources": [
+				{
+					"type": "git",
+					"url": "https://github.com/jacktrip/jacktrip/",
+					"tag": "v2.4.1",
+					"commit": "06ed314a49a94fa74fdc9915c9b55000edab55ce"
+				}
+			]
 		}
-	    ]
-	}
-    ]
+	]
 }
