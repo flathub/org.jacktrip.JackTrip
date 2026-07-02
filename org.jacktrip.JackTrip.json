@@ -12,7 +12,7 @@
 		"--socket=fallback-x11",
 		"--device=dri",
 		"--share=network",
-		"--filesystem=xdg-run/pipewire-0",
+		"--filesystem=xdg-run/pipewire-0:ro",
 		"--env=PIPEWIRE_LATENCY=128/48000",
 		"--env=QML_IMPORT_PATH=/app/qml",
 		"--env=QT_QUICK_CONTROLS_STYLE=universal"
